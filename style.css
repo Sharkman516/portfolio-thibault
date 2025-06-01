@@ -1,0 +1,214 @@
+/* Thème clair (par défaut) */
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Thème sombre */
+body.dark {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Transition douce entre les thèmes */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styles pour le slider hero */
+.hero-slider {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 2rem;
+}
+
+.hero-slider .swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assurez-vous que l'image couvre tout l'espace */
+}
+
+/* Hero Section */
+#hero {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Contenu superposé */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  color: #fff; /* Texte blanc */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour meilleure lisibilité */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Style des boutons de navigation du slider */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+/* Style du bouton de thème */
+.theme-toggle {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  z-index: 9999;
+  padding: 10px 15px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #fff;
+  color: #fff;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+body.dark .theme-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+body.dark .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Styles pour la section À propos */
+.about {
+  padding: 60px 0;
+}
+
+.about .section-title {
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about .section-title p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about .section-title h2 {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.about .section-title h2:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #0d6efd;
+  bottom: 0;
+  left: 0;
+}
+
+/* Timeline styling */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 20px 30px 20px 70px;
+  margin-bottom: 30px;
+  background: var(--bg-color);
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: calc(100% + 30px);
+  background: #0d6efd;
+  left: 35px;
+  top: 0;
+}
+
+.timeline-item:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0d6efd;
+  left: 26px;
+  top: 25px;
+}
+
+.timeline-item:last-child:before {
+  height: 100%;
+}
+
+.timeline-item h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.timeline-item .text-muted {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.timeline-item p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .timeline-item {
+    padding-left: 50px;
+  }
+  
+  .timeline-item:before {
+    left: 25px;
+  }
+  
+  .timeline-item:after {
+    left: 16px;
+  }
+}

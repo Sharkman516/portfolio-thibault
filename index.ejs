@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Portfolio Thibault Claudon</title>
+
+  <!-- Google Fonts & Vendor CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+<body class="light">
+
+  <!-- Theme toggle -->
+  <button id="toggle-theme" class="btn btn-dark theme-toggle position-fixed">🌙 / ☀️</button>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="position-relative">
+    <!-- Slider Swiper -->
+    <div class="swiper hero-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/images/slider1.jpg" alt="Image slider 1">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Contenu superposé -->
+    <div class="hero-content">
+      <h1>Thibault Claudon</h1>
+      <p><span class="typed" data-typed-items="Étudiant passionné par l'informatique, les systèmes, réseaux et la cybersécurité"></span></p>
+    </div>
+  </section>
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Parcours</h2>
+        <p>Mon évolution depuis le Bac jusqu'à mon parcours actuel en BTS SIO.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-up">
+          <h4>🎓 Baccalauréat Professionnel SN – Systèmes Numériques</h4>
+          <span class="text-muted">Lycée Professionnel Élie Vignal – 2021</span>
+          <p>Formation axée sur l'électronique, les systèmes informatiques et les réseaux, avec une première approche concrète des technologies numériques.</p>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <h4>💼 Stage – Mairie de Meyzieu (Service Informatique)</h4>
+          <span class="text-muted">2021</span>
+          <p>Assistance utilisateur, configuration de postes, mise à jour de parc informatique et premiers pas dans un environnement professionnel IT.</p>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <h4>📚 BTS SIO – Option SISR (Solutions d'Infrastructure)</h4>
+          <span class="text-muted">2022 – 2024</span>
+          <p>Formation approfondie en réseaux, sécurité informatique, virtualisation, systèmes Linux/Windows, et gestion d'infrastructure IT.</p>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <h4>💼 Stages BTS – Gestion de projets systèmes & cybersécurité</h4>
+          <span class="text-muted">2023 – 2024</span>
+          <p>Mise en place de solutions sécurisées, développement de scripts d'automatisation, supervision, et sensibilisation à la cybersécurité.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Skills & CV ======= -->
+  <section id="skills" class="facts section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Compétences</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-center mb-3">
+          <img src="/images/langages-banner.jpg" class="img-fluid rounded" alt="Langages maîtrisés">
+        </div>
+
+        <div class="col-lg-12 text-center">
+          <div class="ratio ratio-4x3 mb-3">
+            <iframe src="/files/Thibault_Claudon_CV.pdf" allowfullscreen></iframe>
+          </div>
+          <a href="/telecharger-cv" class="btn btn-primary">📄 Télécharger mon CV</a>
+          <p class="mt-2"><strong>Téléchargements :</strong> <%= downloadCount %></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Projets</h2>
+        <p>Voici mes projets :</p>
+      </div>
+
+      <div class="row portfolio-container">
+        <% projects.forEach(project => { %>
+        <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up">
+          <div class="portfolio-wrap">
+            <img src="<%= project.image %>" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4><%= project.title %></h4>
+              <p><%= project.description %></p>
+              <% if (project.link) { %>
+              <div class="portfolio-links">
+                <a href="<%= project.link %>" target="_blank" title="Voir le projet"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Contact</h2>
+      </div>
+
+      <form action="/send" method="POST" class="php-email-form">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" placeholder="Nom" required>
+          </div>
+          <div class="col-md-6 form-group">
+            <input type="email" name="email" class="form-control" placeholder="Email" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" name="subject" class="form-control" placeholder="Sujet" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea name="message" rows="5" class="form-control" placeholder="Message" required></textarea>
+        </div>
+        <div class="text-center mt-3">
+          <button type="submit">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; <%= new Date().getFullYear() %> Thibault Claudon</p>
+      <a href="/mentions" class="text-white me-3">Mentions légales</a>
+      <a href="/plan" class="text-white">Plan du site</a>
+    </div>
+  </footer>
+
+  <!-- Vendor JS -->
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/vendor/aos/aos.js"></script>
+  <script src="/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/vendor/swiper/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Typed JS (Hero animation) -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    new Typed('.typed', {
+      strings: document.querySelector('.typed').getAttribute('data-typed-items').split(','),
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
+
+  <script src="/js/darkmode-toggle.js"></script>
+  <script>
+    new Swiper('.hero-slider', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+</body>
+</html>
