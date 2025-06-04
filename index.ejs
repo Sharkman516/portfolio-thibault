@@ -20,98 +20,204 @@
   <button id="toggle-theme" class="btn btn-dark theme-toggle position-fixed">🌙 / ☀️</button>
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="position-relative">
-    <!-- Slider Swiper -->
-    <div class="swiper hero-slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="/images/slider1.jpg" alt="Image slider 1">
-        </div>
+  <header class="hero position-relative">
+    <div class="hero-slider">
+      <div class="slide active">
+        <div class="slide-bg" style="background-image: url('/images/slider1.jpg');"></div>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="slide">
+        <div class="slide-bg" style="background-image: url('/images/slider2.jpg');"></div>
+      </div>
     </div>
-
-    <!-- Contenu superposé -->
-    <div class="hero-content">
+    <div class="hero-content text-white text-center glass-bg">
       <h1>Thibault Claudon</h1>
-      <p><span class="typed" data-typed-items="Étudiant passionné par l'informatique, les systèmes, réseaux et la cybersécurité"></span></p>
+      <p><span id="typed-text"></span><span class="cursor">|</span></p>
+      <p>Étudiant en informatique - systèmes et réseaux</p>
+      <a href="#about" class="btn btn-outline-info mt-3">Découvrir ↓</a>
+    </div>
+  </header>
+
+  <!-- ======= About Me Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>À PROPOS DE MOI</h2>
+        <p>Étudiant passionné par les réseaux, la cybersécurité et les systèmes d'information, je suis actuellement en BTS SIO (SISR). J'aime résoudre des problèmes techniques, apprendre de nouvelles technologies et contribuer à des projets concrets en équipe ou de façon autonome.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about section-bg">
+  <!-- ======= Timeline Section ======= -->
+  <section id="timeline" class="section-bg">
     <div class="container" data-aos="fade-up">
       <div class="section-title">
         <h2>Parcours</h2>
-        <p>Mon évolution depuis le Bac jusqu'à mon parcours actuel en BTS SIO.</p>
+        <p>Mon évolution académique et professionnelle.</p>
       </div>
 
       <div class="timeline">
         <div class="timeline-item" data-aos="fade-up">
-          <h4>🎓 Baccalauréat Professionnel SN – Systèmes Numériques</h4>
-          <span class="text-muted">Lycée Professionnel Élie Vignal – 2021</span>
-          <p>Formation axée sur l'électronique, les systèmes informatiques et les réseaux, avec une première approche concrète des technologies numériques.</p>
+          <h4>🎓 BTS Conception Des Processus De Réalisation De Produits – CPRP</h4>
+          <span class="text-muted">Lycée Ferdinand Buisson
+             2021- 2023 </span>
+          <p>Formation concevoir, développer et mettre en œuvre des processus de production.</p>
         </div>
 
         <div class="timeline-item" data-aos="fade-up">
-          <h4>💼 Stage – Mairie de Meyzieu (Service Informatique)</h4>
+          <h4>💼 Service Civique – Maison du département de l'Isère à Saint Marcellin (Service Informatique)</h4>
           <span class="text-muted">2021</span>
-          <p>Assistance utilisateur, configuration de postes, mise à jour de parc informatique et premiers pas dans un environnement professionnel IT.</p>
+          <p>Assistance technique, gestion de parc, intervention sur site.
+            Évaluer les besoins numériques des utilisateurs et concevoir des solutions adaptées.
+          </p>
         </div>
 
         <div class="timeline-item" data-aos="fade-up">
-          <h4>📚 BTS SIO – Option SISR (Solutions d'Infrastructure)</h4>
-          <span class="text-muted">2022 – 2024</span>
-          <p>Formation approfondie en réseaux, sécurité informatique, virtualisation, systèmes Linux/Windows, et gestion d'infrastructure IT.</p>
+          <h4>📚 BTS SIO option SISR – Formation actuelle</h4>
+          <span class="text-muted">2024</span>
+          <p>Formation en réseaux, systèmes, cybersécurité, administration, projets.</p>
         </div>
 
         <div class="timeline-item" data-aos="fade-up">
-          <h4>💼 Stages BTS – Gestion de projets systèmes & cybersécurité</h4>
-          <span class="text-muted">2023 – 2024</span>
-          <p>Mise en place de solutions sécurisées, développement de scripts d'automatisation, supervision, et sensibilisation à la cybersécurité.</p>
+          <h4>💼 Stages BTS 1er année</h4>
+          <span class="text-muted">2025</span>
+          <p>Automatisation, supervision, cybersécurité et documentation technique et
+            et création de site web.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======= Skills & CV ======= -->
-  <section id="skills" class="facts section-bg">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2>Compétences</h2>
-      </div>
+  <!-- ======= Formation Section ======= -->
+  <section id="formation" class="about">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title text-center">
+      <h2 class="text-info">Formation actuelle : BTS SIO – Option SISR</h2>
+      <p>Formation spécialisée dans la gestion, la sécurité et le déploiement d'infrastructures informatiques professionnelles.</p>
+    </div>
 
+    <div class="card border-0 shadow-lg rounded p-4 mx-auto" style="max-width: 1000px;">
       <div class="row">
-        <div class="col-lg-12 text-center mb-3">
-          <img src="/images/langages-banner.jpg" class="img-fluid rounded" alt="Langages maîtrisés">
+        <!-- Colonne Objectifs -->
+        <div class="col-md-6 mb-3">
+          <h4 class="text-primary">Objectifs de la formation</h4>
+          <ul class="list-unstyled">
+            <li>✔️ Gérer et maintenir des serveurs (Linux, Windows)</li>
+            <li>✔️ Mettre en œuvre des architectures réseau sécurisées</li>
+            <li>✔️ Automatiser des tâches via des scripts</li>
+            <li>✔️ Superviser des systèmes (Zabbix, GLPI, etc.)</li>
+            <li>✔️ Assurer la sécurité des données et des services</li>
+          </ul>
         </div>
 
-        <div class="col-lg-12 text-center">
-          <div class="ratio ratio-4x3 mb-3">
-            <iframe src="/files/Thibault_Claudon_CV.pdf" allowfullscreen></iframe>
-          </div>
-          <a href="/telecharger-cv" class="btn btn-primary">📄 Télécharger mon CV</a>
-          <p class="mt-2"><strong>Téléchargements :</strong> <%= downloadCount %></p>
+        <!-- Colonne Compétences -->
+        <div class="col-md-6 mb-3">
+          <h4 class="text-primary">Compétences développées</h4>
+          <ul class="list-unstyled">
+            <li>✔️ Administration systèmes & réseaux</li>
+            <li>✔️ Déploiement d'infrastructures virtualisées</li>
+            <li>✔️ Cybersécurité & prévention des incidents</li>
+            <li>✔️ Rédaction de documentation technique</li>
+            <li>✔️ Communication & gestion de projet</li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+  <!-- ======= Mindmap Section ======= -->
+  <section id="mindmap" class="section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Carte heuristique du Métier d'Administrateur Réseaux</h2>
+      <p>Voici une représentation visuelle de l'ensemble des domaines abordés pour ce métier.</p>
+    </div>
+
+    <div class="text-center">
+      <!-- Correction du chemin de l'image -->
+      <img src="/images/carte_heuristique.png" alt="Carte heuristique BTS SIO" class="img-fluid rounded shadow" style="max-width: 900px;">
+    </div>
+  </div>
+</section>
+
+  <!-- ======= Skills Section ======= -->
+  <section id="skills" class="about section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title text-center">
+        <h2>Compétences</h2>
+        <p>Voici les compétences abordées en 1re année du BTS SIO – option SISR, avec leur niveau de maîtrise actuel.</p>
+      </div>
+
+      <div class="row justify-content-center align-items-start">
+        <!-- Image réduite -->
+        <div class="col-md-4 text-center mb-4 mb-md-0" data-aos="fade-right">
+          <img src="/images/langages-banner.jpg" alt="Langages maîtrisés" class="img-fluid rounded shadow" style="max-width: 220px;">
+        </div>
+
+        <!-- Liste avec barres -->
+        <div class="col-md-8" data-aos="fade-left">
+          <div class="mb-3">
+            <h5>🖥️ Windows / Linux</h5>
+            <div class="progress">
+              <div class="progress-bar bg-info" style="width: 80%;">80%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h5>🌐 Services réseau (DHCP, DNS, AD)</h5>
+            <div class="progress">
+              <div class="progress-bar bg-success" style="width: 50%;">50%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h5>💻 Virtualisation (VirtualBox, VMware, Proxmox)</h5>
+            <div class="progress">
+              <div class="progress-bar bg-warning" style="width: 70%;">70%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h5>⚙️ Scripting (Bash, PowerShell)</h5>
+            <div class="progress">
+              <div class="progress-bar bg-primary" style="width: 65%;">65%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h5>🔐 Sauvegarde et sécurité système</h5>
+            <div class="progress">
+              <div class="progress-bar bg-danger" style="width: 60%;">60%</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h5>📝 Documentation technique</h5>
+            <div class="progress">
+              <div class="progress-bar bg-secondary" style="width: 85%;">85%</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
   <!-- ======= Portfolio Section ======= -->
   <section id="portfolio" class="portfolio">
     <div class="container" data-aos="fade-up">
       <div class="section-title">
         <h2>Projets</h2>
-        <p>Voici mes projets :</p>
+        <p>Découvrez Mes projets à venir pendant ma formation en BTS SIO.</p>
       </div>
 
       <div class="row portfolio-container">
         <% projects.forEach(project => { %>
         <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up">
           <div class="portfolio-wrap">
-            <img src="<%= project.image %>" class="img-fluid" alt="">
+            <img 
+              src="<%= project.image %>" 
+              onerror="this.src='/images/placeholder.jpg'" 
+              class="img-fluid" 
+              alt="<%= project.title %>"
+            >
             <div class="portfolio-info">
               <h4><%= project.title %></h4>
               <p><%= project.description %></p>
@@ -124,6 +230,67 @@
           </div>
         </div>
         <% }); %>
+      </div>
+    </div>
+  </section>
+
+
+      <!-- CV Section -->
+       <h2>Mon CV</h2>
+      <div class="row mt-5">
+        <div class="col-lg-12 text-center">
+          <div class="ratio ratio-4x3 mb-3">
+            <iframe src="/files/Thibault_Claudon_CV.pdf" allowfullscreen></iframe>
+          </div>
+          <a href="/telecharger-cv" class="btn btn-primary">📄 Télécharger mon CV</a>
+          <p class="mt-2"><strong>Téléchargements :</strong> <%= downloadCount %></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ======= Veille Section ======= -->
+  <section id="veille" class="section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title text-center">
+        <h2>Veille informationnelle</h2>
+        <p>Présentation des outils et des thématiques que je surveille régulièrement dans le cadre de ma formation et de ma spécialité.</p>
+      </div>
+
+      <div class="mb-5">
+        <h4>🔎 Méthodes et outils utilisés</h4>
+        <p>
+          Pour suivre l'actualité technologique et sécuritaire, j'utilise plusieurs sources que je consulte régulièrement :
+        </p>
+        <ul>
+          <li><strong><a href="https://feedly.com" target="_blank">Feedly <i class="bi bi-rss"></i></a></strong> : agrégateur de flux RSS personnalisable</li>
+          <li><strong><a href="https://www.google.com/alerts" target="_blank">Google Alerts <i class="bi bi-bell"></i></a></strong> : alertes automatiques sur mots-clés</li>
+          <li><strong><a href="https://twitter.com/CERT_FR" target="_blank">@CERT_FR <i class="bi bi-twitter-x"></i></a></strong> : infos officielles en cybersécurité</li>
+          <li><strong><a href="https://www.bleepingcomputer.com/" target="_blank">BleepingComputer <i class="bi bi-globe"></i></a></strong> : actualité technique</li>
+          <li><strong><a href="https://www.zdnet.fr/" target="_blank">ZDNet France <i class="bi bi-newspaper"></i></a></strong> : nouveautés tech</li>
+          <li><strong><a href="https://www.blogduhacker.fr/" target="_blank">Blog du Hacker <i class="bi bi-shield-lock"></i></a></strong> : cybersécurité</li>
+          <li><strong><a href="https://developpez.com/rss/" target="_blank">Developpez.com <i class="bi bi-code-square"></i></a></strong> : actualités IT</li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <!-- Thème 1 -->
+        <div class="col-md-6 mb-4" data-aos="fade-up">
+          <h4>🛡️ Thème 1 : Cybersécurité</h4>
+          <p>
+            C'est un domaine clé de l'infrastructure. Je m'intéresse à l'actualité des failles critiques (ex : CVE), aux techniques de protection des données, à l'EDR, aux pare-feu, ainsi qu'aux stratégies de réponse à incident. Ce thème est essentiel en SISR, car il touche directement à la sécurisation des réseaux, des serveurs et des postes clients.
+          </p>
+        </div>
+
+        <!-- Thème 2 -->
+        <div class="col-md-6 mb-4" data-aos="fade-up">
+          <h4>🌐 Thème 2 : Virtualisation & supervision</h4>
+          <p>
+            Je suis l'évolution des technologies de virtualisation (Proxmox, VMware, Hyper-V) et des solutions de supervision (Zabbix, GLPI, Centreon). Ces outils sont très utilisés dans les entreprises pour optimiser l'infrastructure, automatiser la gestion et anticiper les pannes. Leur maîtrise est directement liée à mon parcours SISR.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -157,6 +324,42 @@
     </div>
   </section>
 
+  <!-- ======= Plan du site Section ======= -->
+<section id="plan-du-site" class="section bg-dark text-white">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title text-center">
+      <h2>🗺️ Plan du site</h2>
+      <p>Navigation rapide vers les différentes sections de mon portfolio.</p>
+    </div>
+
+    <div class="accordion" id="accordionPlan">
+      <div class="accordion-item bg-secondary text-white">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            📌 Liens de navigation
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <div class="row text-center">
+              <div class="col-6 col-md-4 mb-2"><a href="#hero" class="text-info d-block">🏠 Accueil</a></div>
+              <div class="col-6 col-md-4 mb-2"><a href="#about" class="text-info d-block">👤 À propos</a></div>
+              <div class="col-6 col-md-4 mb-2"><a href="#formation" class="text-info d-block">🎓 Formation</a></div>
+              <div class="col-6 col-md-4 mb-2"><a href="#skills" class="text-info d-block">🛠️ Compétences</a></div>
+              <div class="col-6 col-md-4 mb-2"><a href="#projects" class="text-info d-block">📂 Projets</a></div>
+              <div class="col-6 col-md-4 mb-2"><a href="#veille" class="text-info d-block">📰 Veille</a></div>
+              <div class="col-6 col-md-4 mb-2"><a href="#carte" class="text-info d-block">🧠 Carte heuristique</a></div>
+              <div class="col-6 col-md-4 mb-2"><a href="#contact" class="text-info d-block">✉️ Contact</a></div>
+              <div class="col-6 col-md-4 mb-2"><a href="/mentions" class="text-info d-block">📄 Mentions légales</a></div>
+              <div class="col-6 col-md-4 mb-2"><a href="/politique" class="text-info d-block">🔐 Politique de confidentialité</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- ======= Footer ======= -->
   <footer class="footer bg-dark text-white text-center py-4">
     <div class="container">
@@ -171,23 +374,20 @@
   <script src="/vendor/aos/aos.js"></script>
   <script src="/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="/vendor/swiper/swiper-bundle.min.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-  <!-- Typed JS (Hero animation) -->
+  
+  <!-- Typed JS -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    new Typed('.typed', {
-      strings: document.querySelector('.typed').getAttribute('data-typed-items').split(','),
-      typeSpeed: 100,
-      backSpeed: 50,
-      loop: true
-    });
-  </script>
-
+  
+  <!-- Custom JS -->
   <script src="/js/darkmode-toggle.js"></script>
+  <script src="/js/main.js"></script>
+  
+  <!-- Initializations -->
   <script>
+    // AOS initialization
+    AOS.init();
+    
+    // Hero slider initialization
     new Swiper('.hero-slider', {
       loop: true,
       autoplay: {
